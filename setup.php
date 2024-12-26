@@ -1,4 +1,18 @@
 <?php
+/**
+ * This script sets up the SQLite database and populates it with initial data from a JSON file (coaches.json).
+ *
+ * It performs the following steps:
+ * 1. Creates (or opens) the SQLite database.
+ * 2. Creates the `coaches` table if it does not exist.
+ * 3. Reads the `coaches.json` file.
+ * 4. Inserts the coaches data into the database.
+ *
+ * Response:
+ * - On success: Outputs a success message.
+ * - On error: Outputs an error message.
+ */
+
 try {
     // Create (or open) the SQLite database
     $db = new PDO('sqlite:coaches.db');
